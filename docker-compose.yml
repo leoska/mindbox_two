@@ -1,0 +1,19 @@
+version: '3.1'
+
+services:
+  mariadb:
+    image: mariadb:10.7
+    hostname: mindbox_mariadb
+    restart: "no"
+    volumes:
+      - /etc/localtime:/etc/localtime:ro
+      - ./mariadb/initdb.d:/docker-entrypoint-initdb.d
+      - ./mariadb/data:/var/lib/mysql
+      - ./script.sql:/app/script.sql:ro
+    environment:
+      MYSQL_ROOT_PASSWORD: vySOsih
+    ports:
+      - "3306:3306"
+    logging:
+      options:
+        max-size: 50m
