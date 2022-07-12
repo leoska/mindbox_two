@@ -26,7 +26,7 @@ CREATE TABLE `mindbox`.`products_categories`(
 
 -- Insert test data in tables
 INSERT INTO `mindbox`.`products`(product_name)
-VALUES('iphone'), ('android'), ('macbook'), ('xiaomi mi band'), ('airpods');
+VALUES('iphone'), ('android'), ('macbook'), ('ipad'), ('airpods'), ('xiaomi mi band');
 
 INSERT INTO `mindbox`.`categories`(category_name)
 VALUES('phones'), ('notebooks'), ('headphones'), ('no_products'), ('apple');
